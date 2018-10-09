@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Social App</string>
+
+    <!--exit notification-->
+    <string name="press_again_exit_app">Press again to exit</string>
+    <string name="action_settings">Settings</string>
+    <string name="activity_select_friend">Select Friend</string>
+
+    <string name="about_text">This is Material Design Social App template, this app use dummy data not related for any backend
+    \n\nImage source :
+        \n<a href="www.pexels.com">www.pexels.com</a>
+        \n<a href="www.pixabay.com">www.pixabay.com</a>
+    </string>
+
+    <string name="my_name">John Miller</string>
+
+    <string name="tab_feed">Feeds</string>
+    <string name="tab_friend">Friends</string>
+    <string name="tab_message">Messages</string>
+    <string name="tab_notif">Notifications</string>
+    <string name="tab_profile">Profile</string>
+    <string name="avatar_source">http://www.designskilz.com/</string>
+    <string name="aboutus">
+    Majestic Global Logistics Network (MGLN) is a non-exclusive network of independent freight forwarders and international logistics companies. MGLN agents are carefully recruited to ensure all members benefits from each other business and services.\n
+    </string>
+
+    <string name="aboutus1">
+       <b>  Majestic Global Logistics Network (MGLN) </b>  is a non-exclusive network of independent freight forwarders and international logistics companies. <b>MGLN</b> agents are carefully recruited to ensure all members benefits from each other business and services.\n
+
+<b>MGLN</b> Family member’s are like minded and have a common goal to grow the network by supporting one another. We believe in personalized approach to our members. Understanding our member requirements and helping them to utilize the network to their maximum advantage is one of the <b>MGLN</b> management’s primary objectives.\n
+
+We seek medium-sized agents with aggressive commercial team, who run progressive companies, have strong knowledge in their local market and have reliable financial background.\n
+
+We ensure all our members attend annual meetings not only to build opportunities for their business but also to unwind and strengthen the bond and friendship between the <b>MGLN</b> family members.\n
+    </string>
+</resources>

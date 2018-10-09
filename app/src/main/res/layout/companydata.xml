@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="?android:attr/activatedBackgroundIndicator"
+    android:id="@+id/member"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/lyt_parent"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="?android:attr/activatedBackgroundIndicator"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+
+            android:src="@drawable/world" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="0dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+
+                    android:textColor="@android:color/background_dark"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="5dp"
+
+                    android:src="@drawable/callanswer" />
+
+                <TextView
+                    android:id="@+id/phoneno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="1dp"
+                    android:singleLine="true"
+                    android:text="No PhoneNo Found"
+
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/worldgrey" />
+
+                <TextView
+                    android:id="@+id/Country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+
+                    android:paddingTop="1dp"
+                    android:singleLine="true"
+                    android:text="No Country Found"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="2.5dp"
+
+                    android:src="@drawable/atdarkgrey" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="1dp"
+                    android:singleLine="false"
+                    android:text="No Email Found"
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/companyid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:singleLine="true"
+
+                android:text="No Email Found"
+                android:textColor="@color/material_grey_600"
+                android:textSize="8sp" />
+                </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</com.balysv.materialripple.MaterialRippleLayout>

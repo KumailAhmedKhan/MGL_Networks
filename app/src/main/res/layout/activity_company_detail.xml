@@ -1,0 +1,1087 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentscrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.app.sample.social.MGLNetworks.Loaders.CompanyDataLoaders$CompanyDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1500dp"
+        android:background="@color/whiteOverlay1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageButton
+                android:id="@+id/BackButton"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+
+
+                android:layout_marginBottom="5dp"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/transparent"
+                android:src="@drawable/backimage" />
+
+            <TextView
+                android:id="@+id/LogoutButton"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Logout"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#004d99">
+
+            <TextView
+                android:id="@+id/CompanyName"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="#004d99"
+                android:gravity="center"
+                android:text="Company Name"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/CompanyLogo"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="20dp"
+                app:srcCompat="@android:drawable/ic_delete" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            tools:background="@android:color/background_light">
+
+            <TextView
+                android:id="@+id/CompanyInformation"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:background="@color/grey_hard1"
+                android:gravity="center"
+                android:text="Company Information"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                tools:shadowColor="@android:color/holo_blue_dark" />
+
+            <TextView
+                android:id="@+id/CertificationsLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/Branches"
+                android:layout_marginRight="5dp"
+                android:text="Certifications:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/AnnualTurnoverLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/CountryLabel"
+                android:layout_marginRight="5dp"
+                android:text="Annual Turnover"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/CountryLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:text="Country:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Certifications"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/CertificationsLabel"
+                android:layout_marginRight="5dp"
+                android:gravity="top"
+                android:paddingTop="5dp"
+                android:scrollbarFadeDuration="600000"
+                android:scrollbars="vertical"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/TotalEmployeesLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/Country"
+                android:layout_marginLeft="20dp"
+                android:text="Total Employees:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Country"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/CountryLabel"
+                android:layout_marginLeft="20dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+
+            <TextView
+                android:id="@+id/TotalEmployees"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/TotalEmployeesLabel"
+                android:layout_marginLeft="20dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/RegistrationNumberLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/TotalEmployees"
+                android:layout_marginLeft="20dp"
+                android:text="Registration Number:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Address"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/CountryLabel"
+                android:layout_below="@+id/AddressLabel"
+                android:gravity="top"
+                android:scrollbarFadeDuration="600000"
+                android:scrollbars="vertical"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/RegistrationNumber"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RegistrationNumberLabel"
+                android:layout_marginLeft="20dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/EstablishmentYearLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RegistrationNumber"
+                android:layout_marginLeft="20dp"
+                android:text="Establishment Year:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/EstablishmentYear"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/EstablishmentYearLabel"
+                android:layout_marginLeft="20dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/AddressLabel"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Services"
+                android:layout_marginLeft="20dp"
+                android:text="Address:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/AnnualTurnoverLabe"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/EstablishmentYear"
+                android:layout_marginLeft="20dp"
+                android:text="Services"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Services"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/AnnualTurnoverLabe"
+                android:layout_marginLeft="20dp"
+                android:gravity="top"
+
+                android:scrollbars="vertical"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/OfficeNumbrLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/Country"
+                android:layout_marginRight="5dp"
+                android:text="Office Number:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/AnnualTurnover"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/Country"
+                android:layout_marginRight="5dp"
+                android:autoText="false"
+                android:lines="1"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/OfficeNumber"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/TotalEmployeesLabel"
+                android:layout_marginRight="5dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/Branches"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/BranchesLabel"
+                android:layout_marginRight="5dp"
+                android:gravity="top"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/IATACodeLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/RegistrationNumber"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:text="IATA Code:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/IATACode"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/RegistrationNumber"
+                android:layout_marginRight="5dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/BranchesLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/FaxNumber"
+                android:layout_marginRight="5dp"
+                android:text="Branches:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/FaxNumber"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/FaxNumberLabel"
+                android:layout_marginRight="5dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/FaxNumberLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/RegistrationNumber"
+                android:layout_marginRight="5dp"
+                android:text="Fax number:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/CurrentAddress"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/CountryLabel"
+                android:layout_below="@+id/textView2"
+                android:text="N/A"
+                android:textColor="@android:color/background_dark" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/Address"
+                android:layout_marginLeft="20dp"
+                android:text="Current Address:"
+                android:textColor="@android:color/background_dark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/CountryLabel"
+                android:layout_below="@+id/CurrentAddress"
+                android:layout_marginTop="5dp"
+                android:background="#004d99"
+                android:gravity="center"
+                android:text="Key Contact Detail"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:background="@android:color/background_light">
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/KCD1Name"
+                android:layout_marginTop="20dp"
+                android:background="@color/grey_hard1"
+                android:shadowColor="@android:color/holo_blue_light"
+                android:text="Contact 1 Details"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/grey_hard1"
+                android:shadowColor="@android:color/holo_blue_light"
+                android:text="Contact 2 Detail"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/KCD1NameLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView36"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Name:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/KCD2NameLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/textView36"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:text="Name:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/KCD1Name"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/KCD1NameLabel"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="0dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/KCD2Name"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/KCD2NameLabel"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="0dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/KCD1DesignationLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/KCD1Name"
+                android:layout_marginLeft="20dp"
+                android:text="Designation:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/KCD2Designation"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/KCD2DesignationLabel"
+                android:layout_marginRight="5dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/KCD2DesignationLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/KCD2Name"
+                android:layout_marginRight="5dp"
+                android:text="Designation:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/KCD1Designation"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/KCD1DesignationLabel"
+                android:layout_marginLeft="20dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/KCD1OfficeNumberLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/KCD1Designation"
+                android:layout_marginLeft="20dp"
+                android:text="Office Number:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/KCD1OfficeNumbr"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView36"
+                android:layout_below="@+id/KCD1OfficeNumberLabel"
+                android:gravity="top"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/KCD2OfficeumberLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/KCD2Designation"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="0dp"
+                android:text="Office Number:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/KCD2OfficeNumber"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView52"
+                android:layout_below="@+id/KCD2OfficeumberLabel"
+                android:gravity="top"
+                android:paddingTop="5dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/KCD1MobileNumberLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/KCD1OfficeNumbr"
+                android:layout_marginLeft="20dp"
+                android:text="Mobile Number:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/KCD1MobileNumber"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/KCD1MobileNumberLabel"
+                android:layout_marginLeft="20dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/KCD2MobileNumberLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView52"
+                android:layout_below="@+id/KCD2OfficeNumber"
+                android:text="Mobile Number:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/KCD2MobileNumber"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/KCD2MobileNumberLabel"
+                android:layout_marginRight="5dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/KCD1EmailLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/KCD1MobileNumber"
+                android:layout_marginLeft="20dp"
+                android:text="Email:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/KCD1Email"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/KCD1EmailLabel"
+                android:layout_marginLeft="20dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/KCD1SkypeLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/KCD1Email"
+                android:layout_marginLeft="20dp"
+                android:text="Skype:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/KCD1Skype"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/KCD1SkypeLabel"
+                android:layout_marginLeft="20dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/KCD2EmailLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/KCD2MobileNumber"
+                android:layout_marginRight="5dp"
+                android:text="Email:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/KCD2Email1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/KCD2EmailLabel"
+                android:layout_marginRight="5dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/KCD2SkypeLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/KCD2Email1"
+                android:layout_marginRight="5dp"
+                android:text="Skype:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/KCD2Skype"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/KCD2SkypeLabel"
+                android:layout_marginRight="5dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/textView80"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#004d99"
+
+                android:gravity="center"
+                android:text="Reference Contact Details"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/textView81"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView80"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey_hard1"
+                android:text="Contact 1 Details"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/textView82"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/textView80"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey_hard1"
+                android:shadowColor="@android:color/holo_blue_dark"
+                android:text="Contact 2 Details"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/RCD1CompanyNameLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/textView81"
+                android:layout_marginTop="87dp"
+                android:text="Company Name:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/RCD1CompanyName"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RCD1CompanyNameLabel"
+                android:layout_marginLeft="10dp"
+                android:lines="1"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/RCD1ContactLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RCD1CompanyName"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="Contact:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView87"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="141dp"
+                android:lines="1"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/RCD2CompanyName"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/RCD2CompanyNameLabel"
+                android:layout_marginRight="10dp"
+                android:lines="1"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/RCD2CompanyNameLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/RCD1CompanyNameLabel"
+                android:layout_marginRight="10dp"
+                android:text="Company Name:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/RCD1TypeOfBusinessLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView87"
+                android:layout_marginLeft="10dp"
+                android:text="Type of Business:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/RCD1TypeOfBusiness"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RCD1TypeOfBusinessLabel"
+                android:layout_marginLeft="10dp"
+                android:lines="1"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/RCD1DesignationLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RCD1TypeOfBusiness"
+                android:layout_marginLeft="10dp"
+                android:text="Designation:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/RCD1Designation"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RCD1DesignationLabel"
+                android:layout_marginLeft="10dp"
+                android:lines="1"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/RCD1TelephoneLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RCD1Designation"
+                android:layout_marginLeft="10dp"
+                android:text="Telephone:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/RCD1Telephone"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RCD1TelephoneLabel"
+                android:layout_marginLeft="10dp"
+                android:lines="1"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/RCD1FaxNumberLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RCD1Telephone"
+                android:layout_marginLeft="10dp"
+                android:text="Fax Number:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/RCD1EmailLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RCD1FaxNumber"
+                android:layout_marginLeft="10dp"
+                android:text="Email:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/RCD1FaxNumber"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RCD1FaxNumberLabel"
+                android:layout_marginLeft="10dp"
+                android:lines="1"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/RCD1Email"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RCD1EmailLabel"
+                android:layout_marginLeft="10dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/RCD2ContactLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/RCD2CompanyName"
+                android:layout_marginRight="10dp"
+                android:text="Contact"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/RCD2Contact"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/RCD2ContactLabel"
+                android:layout_marginRight="10dp"
+                android:lines="1"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/RCD2TypeOfBusinessLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/RCD2Contact"
+                android:layout_marginRight="10dp"
+                android:text="Type Of Business:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/RCD2TypeOfBusiness"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/RCD2TypeOfBusinessLabel"
+                android:layout_marginRight="10dp"
+                android:lines="1"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/RCD2DesignationLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/RCD2TypeOfBusiness"
+                android:layout_marginRight="10dp"
+                android:text="Designation:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/RCD2Designation"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/RCD2DesignationLabel"
+                android:layout_marginRight="10dp"
+                android:lines="1"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/RCD2Telephone"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/RCD2TelephoneLabel"
+                android:layout_marginRight="10dp"
+                android:lines="1"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/RCD2TelephoneLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/RCD1Designation"
+                android:layout_marginRight="10dp"
+                android:text="Telephone:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/RCD2FaxNumberLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/RCD2Telephone"
+                android:layout_marginRight="10dp"
+                android:text="Fax Number:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/RCD2Email"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/RCD1EmailLabel"
+                android:layout_marginRight="10dp"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/RCD2EmailLabel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/RCD1EmailLabel"
+                android:layout_marginRight="10dp"
+                android:text="Email:"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/RCD2FaxNumber"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/RCD2FaxNumberLabel"
+                android:layout_marginRight="10dp"
+                android:lines="1"
+                android:text="N/A"
+                android:textColor="@android:color/black" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>
